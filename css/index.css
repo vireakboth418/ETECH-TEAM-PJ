@@ -142,3 +142,15 @@
   @media (max-width: 767.98px){
     .drop-card{ aspect-ratio: 4/5; }
   }
+
+  @media screen and (min-width: 768px) and (max-width:1279px) {
+  .carousel .carousel-inner .carousel-item .img{
+    height: 40vh;
+   }
+  }
+  @media screen and (min-width: 1280px)  {
+  .carousel .carousel-inner .carousel-item .img{
+    height: 70vh;
+   }
+  }
+
