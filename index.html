@@ -1,119 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-Shop Header</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-  body { font-family: Arial, Helvetica, sans-serif; background: #ffffff; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Shop Header</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+    integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
 
-  .header-wrap {
-    max-width: 1500px;
-    margin: 0 auto;
-    border-radius: 6px;
-    overflow: hidden;
-  }
+    .header-wrap {
+      max-width: 1500px;
+      margin: 0 auto;
+      border-radius: 6px;
+      overflow: hidden;
+    }
 
-  /* ✅ overflow: visible so dropdowns are not clipped */
-  .navbar {
-    max-width: 1500px;
-    margin: 0 auto;
-    background-color: #222;
-    overflow: visible;
-  }
+    /* ✅ overflow: visible so dropdowns are not clipped */
+    .navbar {
+      max-width: 1500px;
+      margin: 0 auto;
+      background-color: #222;
+      overflow: visible;
+    }
 
-  .carousel {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  .carousel img {
-    height: 700px;
-    object-fit: cover;
-  }
+    .carousel {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
 
-  .card {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
+    .carousel img {
+      height: 700px;
+      object-fit: cover;
+    }
 
-  .top-bar {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    font-size: 13px;
-    color: #777;
-    padding: 8px 25px;
-  }
-  .top-bar a { color: #777; text-decoration: none; margin-left: 18px; }
-  .top-bar a:first-child { margin-left: 0; }
+    .card {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
 
-  .main-bar { padding: 18px 25px; }
+    .top-bar {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      font-size: 13px;
+      color: #777;
+      padding: 8px 25px;
+    }
 
-  .logo { font-size: 28px; font-weight: bold; color: #222; white-space: nowrap; }
-  .logo span { color: #e8632a; }
+    .top-bar a {
+      color: #777;
+      text-decoration: none;
+      margin-left: 18px;
+    }
 
-  .search-box { display: flex; border: 1px solid #ddd; border-radius: 3px; overflow: hidden; }
-  .search-box select {
-    border: none; border-right: 1px solid #ddd; padding: 0 10px;
-    background: #f8f8f8; font-size: 13px;
-  }
-  .search-box input { flex: 1; border: none; padding: 10px; font-size: 14px; outline: none; }
-  .search-box button { background: #e8632a; border: none; color: #fff; padding: 0 18px; }
+    .top-bar a:first-child {
+      margin-left: 0;
+    }
 
-  .account, .cart { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #333; }
-  .icon { font-size: 22px; }
-  .cart .badge {
-    background: #e8632a; color: #fff; border-radius: 50%;
-    font-size: 10px; padding: 1px 5px; margin-right: 4px;
-  }
+    .main-bar {
+      padding: 18px 25px;
+    }
 
-  /* nav links */
-  .navbar .nav-link {
-    font-size: 15px;
-    color: #fff;
-    padding: 14px 16px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  .navbar .nav-link:hover,
-  .navbar .nav-link:focus {
-    color: #e8632a;
-  }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+      white-space: nowrap;
+    }
 
-  /* categories orange button */
-  .categories-btn {
-    background-color: #e8632a;
-    color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    padding: 14px 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-    text-decoration: none;
-    border: none;
-  }
-  .categories-btn:hover {
-    color: #fff;
-    background-color: #d6551f;
-  }
-  .categories-btn i {
-    font-size: 18px;
-  }
+    .logo span {
+      color: #e8632a;
+    }
 
-  /* offcanvas dark background */
-  .offcanvas {
-    background-color: #222;
-  }
-  .offcanvas .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%);
-  }
-</style>
+    .search-box {
+      display: flex;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .search-box select {
+      border: none;
+      border-right: 1px solid #ddd;
+      padding: 0 10px;
+      background: #f8f8f8;
+      font-size: 13px;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #000000;
+      border: none;
+      color: #fff;
+      padding: 0 18px;
+    }
+
+    .account,
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .icon {
+      font-size: 22px;
+    }
+
+    .cart .badge {
+      background: #e8632a;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 10px;
+      padding: 1px 5px;
+      margin-right: 4px;
+    }
+
+    /* nav links */
+    .navbar .nav-link {
+      font-size: 15px;
+      color: #fff;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      color: #e8632a;
+    }
+
+    /* categories orange button */
+    .categories-btn {
+      background-color: #e8632a;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: none;
+    }
+
+    .categories-btn:hover {
+      color: #fff;
+      background-color: #d6551f;
+    }
+
+    .categories-btn i {
+      font-size: 18px;
+    }
+
+    /* offcanvas dark background */
+    .offcanvas {
+      background-color: #222;
+    }
+
+    .offcanvas .btn-close {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="header-wrap">
@@ -131,23 +200,25 @@
     <div class="main-bar">
       <div class="row align-items-center gy-3">
         <div class="col-12 col-md-3 text-center text-md-start">
-          <span class="logo">E-<span>SHOP</span></span>
+          <img src="./img/logo.jpg" style="width: 200px; height: 100px; border-radius: 50%;">
         </div>
         <div class="col-12 col-md-6">
           <div class="search-box">
-            <select><option>All Categories</option></select>
+            <select>
+              <option>All Categories</option>
+            </select>
             <input type="text" placeholder="Enter your keyword">
-            <button>🔍</button>
+            <button><i class="bi bi-search"></i></button>
           </div>
         </div>
         <div class="col-12 col-md-3">
           <div class="d-flex justify-content-center justify-content-md-end gap-4">
             <div class="account">
-              <span class="icon">👤</span>
+              <span class="icon"><i class="bi bi-person"></i></span>
               <div>MY ACCOUNT ▾<br>LOGIN / JOIN</div>
             </div>
             <div class="cart">
-              <span class="icon">🛒</span>
+              <span class="icon"><i class="bi bi-cart"></i></span>
               <div><span class="badge">1</span>MY CART:<br>35.20$</div>
             </div>
           </div>
@@ -161,17 +232,19 @@
     <div class="container-fluid p-0 align-items-stretch">
 
       <!-- Orange CATEGORIES button (hidden on mobile) -->
-      <a class="categories-btn d-none d-lg-flex" href="#">
+      <!-- <a class="categories-btn d-none d-lg-flex" href="#">
         <i class="bi bi-list"></i> CATEGORIES
-      </a>
+      </a> -->
 
       <!-- Hamburger toggler (visible on mobile only) -->
-      <button class="navbar-toggler text-white border-0 ms-auto me-3 my-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler text-white border-0 ms-auto me-3 my-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="bi bi-justify fs-4 text-white"></span>
       </button>
 
       <!-- Nav links -->
-      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -185,7 +258,8 @@
               <a class="nav-link" href="./page/shop.html">SHOP</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 WOMEN
               </a>
               <ul class="dropdown-menu">
@@ -195,7 +269,8 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 MEN
               </a>
               <ul class="dropdown-menu">
@@ -205,16 +280,17 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SALES</a>
+              <a class="nav-link" href="#">NIKEFOOTBALL</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 PAGES
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact</a></li>
-                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                <li><a class="dropdown-item" href="./page/about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="./page/contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="index.html">Home Page</a></li>
               </ul>
             </li>
           </ul>
@@ -225,29 +301,30 @@
   </nav>
 
   <!-- slide -->
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div id="carouselExampleDark" class="carousel carousel-white slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="./img/2.webp" class="d-block w-100" alt="Slide 1">
+        <img src="./img/banner2gif.gif" class="d-block w-100" alt="Slide 1">
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="./img/3.webp" class="d-block w-100" alt="Slide 2">
+        <img src="./img/bannergif.gif" class="d-block w-100" alt="Slide 2">
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./img/shosebanner.jpg" class="d-block w-100" alt="Slide 3">
+        <img src="./img/footballgif.gif" class="d-block w-100" alt="Slide 3">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -264,21 +341,108 @@
     </button>
   </div>
 
-  <div class="card">
-    <div class="d-flex g-4">
-      <div class="col-lg-4" style="width: 470px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfkwrzJNL8kXeFYCNeVQPVnNJCtQ0hKj-VlxSoqwEjjuREmewDxuHGB9rD&s=10">
-      </div>
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfkwrzJNL8kXeFYCNeVQPVnNJCtQ0hKj-VlxSoqwEjjuREmewDxuHGB9rD&s=10">
-      </div>
-      <div class="col-lg-4">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfkwrzJNL8kXeFYCNeVQPVnNJCtQ0hKj-VlxSoqwEjjuREmewDxuHGB9rD&s=10">
+  <!-- card -->
+
+
+
+
+
+  <div class="container py-5 py-md-6">
+
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7">
+        <div class="eyebrow mb-2">Season 04 — Field Notes</div>
+        <h1 class="section-title display-5 mb-3">The New Collection</h1>
+        <div class="divider mx-auto mb-3"></div>
+        <p class="text-muted mb-0" style="font-size:.98rem;">
+          Three pieces, three textures — camo leather, knit-mesh trainers,
+          and saddle-tan hide. Built for the walk between seasons.
+        </p>
       </div>
     </div>
+
+
+
+    <div class="row g-3 g-md-4">
+
+      <div class="col-12 col-md-4">
+        <a href="#" class="drop-card">
+          <span class="drop-index">01</span>
+          <img src="./img/new3.avif" alt="Camo leather crossbody bag">
+          <div class="drop-body">
+            <span class="drop-tag">New Collection</span>
+            <h3 class="drop-title">Camo&nbsp;Hide<br>Crossbody</h3>
+            <div class="drop-rule"></div>
+            <div class="drop-cta">Shop the bag &rarr;</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <a href="#" class="drop-card">
+          <span class="drop-index">02</span>
+          <img src="./img/new2.avif" alt="Knit mesh sneakers">
+          <div class="drop-body">
+            <span class="drop-tag">New Collection</span>
+            <h3 class="drop-title">Knit&#8209;Mesh<br>Trainers</h3>
+            <div class="drop-rule"></div>
+            <div class="drop-cta">Shop the trainers &rarr;</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <a href="#" class="drop-card">
+          <span class="drop-index">03</span>
+          <img src="./img/new4.avif" alt="Saddle tan leather bag">
+          <div class="drop-body">
+            <span class="drop-tag">New Collection</span>
+            <h3 class="drop-title">Saddle&nbsp;Tan<br>Shoulder Bag</h3>
+            <div class="drop-rule"></div>
+            <div class="drop-cta">Shop the bag &rarr;</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row justify-content-center text-center mb-5">
+
+    <div class="col-12 col-md-4">
+      <a href="#" class="drop-card">
+        <span class="drop-index">02</span>
+        <img src="./img/shosenew.avif" alt="Knit mesh sneakers">
+        <div class="drop-body">
+          <span class="drop-tag">New Collection</span>
+          <h3 class="drop-title">Knit&#8209;Mesh<br>Trainers</h3>
+          <div class="drop-rule"></div>
+          <div class="drop-cta">Shop the trainers &rarr;</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <a href="#" class="drop-card">
+        <span class="drop-index">03</span>
+        <img src="./img/new5.avif" alt="Saddle tan leather bag">
+        <div class="drop-body">
+          <span class="drop-tag">New Collection</span>
+          <h3 class="drop-title">Saddle&nbsp;Tan<br>Shoulder Bag</h3>
+          <div class="drop-rule"></div>
+          <div class="drop-cta">Shop the bag &rarr;</div>
+        </div>
+      </a>
+    </div>
+
+
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
